@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "compile-contract-types": "typechain --target ethers-v5 --out-dir './contracts/types' './contracts/*.json'",
+    "compile-contract-types": "typechain --target ethers-v5 --out-dir ./contracts/types ./contracts/*.json",
     "postinstall": "yarn compile-contract-types"
   },
   "dependencies": {
@@ -22,12 +22,13 @@
     "@web3-react/injected-connector": "^6.0.7",
     "next": "12.0.2",
     "react": "17.0.2",
+    "react-datetime-picker": "^3.4.2",
     "react-dom": "17.0.2",
     "swr": "^1.0.1"
   },
   "devDependencies": {
     "@typechain/ethers-v5": "^8.0.1",
-    "@types/react": "^17.0.34",
+    "@types/react": "17.0.36",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.2",
     "ethers": "^5.5.1",
