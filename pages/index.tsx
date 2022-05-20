@@ -3,10 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Account from "../components/Account";
 import ETHBalance from "../components/ETHBalance";
-import TokenBalance from "../components/TokenBalance";
+import RegisterETHSend from "../components/RegisterETHSend";
 import useEagerConnect from "../hooks/useEagerConnect";
-
-const DAI_TOKEN_ADDRESS = "0x6b175474e89094c44da98b954eedeac495271d0f";
 
 function Home() {
   const { account, library } = useWeb3React();
@@ -18,33 +16,29 @@ function Home() {
   return (
     <div>
       <Head>
-        <title>next-web3-boilerplate</title>
+        <title>Future Transaction Bot</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header>
         <nav>
           <Link href="/">
-            <a>next-web3-boilerplate</a>
+            <a>FutureTx</a>
           </Link>
-
-          <Account triedToEagerConnect={triedToEagerConnect} />
+          <div className="account-info">
+            <ETHBalance />
+            <Account triedToEagerConnect={triedToEagerConnect} />
+          </div>
         </nav>
       </header>
 
       <main>
         <h1>
-          Welcome to{" "}
-          <a href="https://github.com/mirshko/next-web3-boilerplate">
-            next-web3-boilerplate
-          </a>
+          Create Future Transaction
         </h1>
-
         {isConnected && (
           <section>
-            <ETHBalance />
-
-            <TokenBalance tokenAddress={DAI_TOKEN_ADDRESS} symbol="DAI" />
+            <RegisterETHSend/>
           </section>
         )}
       </main>
