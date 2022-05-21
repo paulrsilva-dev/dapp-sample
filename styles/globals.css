@@ -1,9 +1,14 @@
 html,
 body {
+  --main-color: #4b2eb3;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(159deg, rgba(193,97,255,1) 0%, rgba(158,243,255,1) 50%);
 }
 
 a {
@@ -13,4 +18,116 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+header {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 0 auto 60px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Consolas, 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: white;
+}
+
+header .account-info {
+  display: flex;
+  align-items: center;
+}
+
+header .account-info p {
+  margin-right: 20px;
+}
+
+header .account-info .wallet-address {
+  padding: 0 4px;
+  border: 2px solid;
+}
+
+.account-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.account-button button {
+  line-height: 1;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  max-width: 480px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(255,255,255,0.8);
+  margin: auto;
+}
+
+main h1 {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 0 20px;
+}
+
+.form-row > span {
+  display: block;
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.form-row > input,
+.react-datetime-picker {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+
+.form-row > input,
+.react-datetime-picker input {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.react-datetime-picker__wrapper {
+  border: none !important;
+}
+
+.form .submit-button {
+  font-size: 24px;
+  color: white;
+  background: var(--main-color);
+  padding: 8px 30px;
+  border: 2px solid var(--main-color);
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(200,200,200,0.4);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.form .submit-button:hover {
+  box-shadow: 0 5px 10px rgba(200,200,200,0.8);
 }

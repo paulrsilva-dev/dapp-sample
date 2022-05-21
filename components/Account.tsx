@@ -42,7 +42,7 @@ const Account = ({ triedToEagerConnect }: AccountProps) => {
 
   if (typeof account !== "string") {
     return (
-      <div>
+      <div className="account-button">
         {isWeb3Available ? (
           <button
             disabled={connecting}
@@ -70,6 +70,7 @@ const Account = ({ triedToEagerConnect }: AccountProps) => {
 
   return (
     <a
+      className="wallet-address"
       {...{
         href: formatEtherscanLink("Account", [chainId, account]),
         target: "_blank",
