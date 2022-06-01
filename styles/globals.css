@@ -97,6 +97,14 @@ main h1 {
   margin: 0 0 6px;
 }
 
+.form-row > span.hint-text {
+  display: block;
+  font-weight: 300;
+  font-size: 14px;
+  color: #666666;
+  margin-top: 2px;
+}
+
 .form-row > input,
 .react-datetime-picker {
   box-sizing: border-box;
@@ -120,6 +128,7 @@ main h1 {
   font-size: 24px;
   color: white;
   background: var(--main-color);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 8px 30px;
   border: 2px solid var(--main-color);
   border-radius: 20px;
