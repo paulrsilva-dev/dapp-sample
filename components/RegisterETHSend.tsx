@@ -23,7 +23,7 @@ const RegisterETHSend = () => {
   const [callData, setCallData] = useState("");
   const contract = useRegistryContract();
 
-  const useRegisterETHSend = async (callData, ethForCall) => {
+  const registerETHSend = async (callData, ethForCall) => {
     // The additional 0.01 ETH in `payableValue` is for the bot to execute the transaction
     const payableValue = parseEther((parseFloat(ethForCall)+0.01).toString());
 
@@ -81,7 +81,7 @@ const RegisterETHSend = () => {
         <span>Receiver Address</span>
         <input onChange={(event) => setReceiverAddress(event.target.value)}></input>
       </div>
-      <button className="submit-button" onClick={() => useRegisterETHSend(callData, ethAmount)}>Submit</button>
+      <button className="submit-button" onClick={() => registerETHSend(callData, ethAmount)}>Submit</button>
     </div>
   );
 };
